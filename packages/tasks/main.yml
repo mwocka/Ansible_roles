@@ -1,0 +1,6 @@
+- name: Install unzip
+  package:
+    name:
+      - unzip
+      - net-tools
+    state: present
