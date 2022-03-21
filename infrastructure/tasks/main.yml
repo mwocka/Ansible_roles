@@ -1,7 +1,8 @@
 - name: Install docker-compose python package
+  become: true
   pip:
     name: 
-    - docker>5
+    - docker
     - docker-compose
 
 - name: Git checkout
