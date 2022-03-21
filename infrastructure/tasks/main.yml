@@ -8,14 +8,9 @@
     dest: "{{ deployment_path }}"
     version: feature/sonarqube
 
-- name: Restart docker service
-  become: true
-  service: 
-    name: docker 
-    state: restarted
-
 - name: Run `docker-compose up`
   docker_compose:
     project_src: "{{ deployment_path }}/"
     build: yes
     debug: yes
+  become: true
