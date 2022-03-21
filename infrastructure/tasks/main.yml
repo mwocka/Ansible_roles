@@ -9,6 +9,7 @@
     version: feature/sonarqube
 
 - name: Restart docker service
+  become: true
   service: 
     name: docker 
     state: restarted
