@@ -1,6 +1,8 @@
 - name: Install docker-compose python package
   pip:
-    name: docker-compose
+    name: 
+    - docker-compose
+    - docker
 
 - name: Git checkout
   ansible.builtin.git:
