@@ -1,5 +1,4 @@
 - name: Install docker-compose python package
-  become: true
   pip:
     name: 
     - docker
@@ -16,4 +15,3 @@
     project_src: "{{ deployment_path }}/"
     build: yes
     debug: yes
-  become: true
