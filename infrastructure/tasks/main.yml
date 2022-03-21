@@ -8,7 +8,7 @@
     dest: "{{ deployment_path }}"
     version: feature/sonarqube
 
-- name: Ensure docker service is up
+- name: Restart docker service
   service: 
     name: docker 
     state: restarted
