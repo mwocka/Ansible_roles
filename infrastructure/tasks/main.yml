@@ -1,0 +1,15 @@
+- name: Install docker-compose python package
+  pip:
+    name: docker-compose
+
+- name: Git checkout
+  ansible.builtin.git:
+    repo: 'https://github.com/PandaAcademy/Infrastructure'
+    dest: "{{ deployment_path }}"
+    version: feature/sonarqube
+
+- name: Run `docker-compose up`
+  docker_compose:
+    project_src: "{{ deployment_path }}/"
+    build: yes
+    debug: yes
