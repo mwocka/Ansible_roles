@@ -1,1 +1,3 @@
 deployment_path: "~/Infrastructure"
+git_repository: "https://github.com/PandaAcademy/Infrastructure"
+git_branch: "master"

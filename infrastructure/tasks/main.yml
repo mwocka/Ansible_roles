@@ -5,13 +5,13 @@
     - docker-compose
 
 - name: Git checkout
-  ansible.builtin.git:
-    repo: 'https://github.com/PandaAcademy/Infrastructure'
+  git:
+    repo: "{{ git_repository }}"
     dest: "{{ deployment_path }}"
-    version: feature/sonarqube
+    version: "{{ git_branch }}"
 
 - name: Run `docker-compose up`
   docker_compose:
-    project_src: "{{ deployment_path }}/"
+    project_src: "{{ deployment_path }}"
     build: yes
     debug: yes
